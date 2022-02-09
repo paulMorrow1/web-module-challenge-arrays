@@ -84,8 +84,8 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(originalFlavor){
-  originalFlavor.unshift('Rainbow Sherbert');
-  return originalFlavor;
+  originalFlavors.unshift('Rainbow Sherbert');
+  return originalFlavors;
 }
 
 
@@ -100,8 +100,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(originalFlavors){
+ originalFlavors.pop();
+ return originalFlavors;
 }
 
 
@@ -117,8 +118,9 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(originalFlavors, num){
+  originalFlavors[num];
+  return originalFlavors[2];
 }
 
 
@@ -137,9 +139,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(originalFlavors, flavor) {
+  for (let i = 0; i < originalFlavors.length; i++){
+  let pos = originalFlavors.indexOf(flavor);
+  originalFlavors.splice(pos, 1)
+  return originalFlavors;
 }
+};
+
 
 
 
